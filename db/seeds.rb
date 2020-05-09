@@ -24,3 +24,13 @@ end
 end
 
 Game.create(title: 'Controversy on Canvas', category_id: Category.find_by(name: 'Arts & Entertainment').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
+
+Game.create(title: 'Musical Conspiracy Theories', category_id: Category.find_by(name: 'Arts & Entertainment').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
+
+Game.create(title: 'Ruler Rules', category_id: Category.find_by(name: 'Games & Sports').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
+
+Game.create(title: 'The Great War', category_id: Category.find_by(name: 'History').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
+
+Game.create(title: 'The Solar System', category_id: Category.find_by(name: 'Science & Tech').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
+
+Game.create(title: 'Starts With L', category_id: Category.find_by(name: 'Hodge Podge').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
