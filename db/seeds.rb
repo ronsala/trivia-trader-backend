@@ -8,7 +8,12 @@
 
 require 'faker'
 
+Category.destroy_all
 User.destroy_all
+
+['Arts & Entertainment', 'Games & Sports', 'History', 'Science & Tech', 'Hodge Podge'].each do |c|
+  Category.create(name: c)
+end
 
 20.times do
   User.create(
