@@ -9,6 +9,7 @@
 require 'faker'
 
 Category.destroy_all
+Game.destroy_all
 User.destroy_all
 
 ['Arts & Entertainment', 'Games & Sports', 'History', 'Science & Tech', 'Hodge Podge'].each do |c|
@@ -21,3 +22,5 @@ end
     email: Faker::Internet.email
   )
 end
+
+Game.create(title: 'Controversy on Canvas', category_id: Category.find_by(name: 'Arts & Entertainment').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
