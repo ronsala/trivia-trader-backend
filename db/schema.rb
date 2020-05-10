@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_09_200537) do
+ActiveRecord::Schema.define(version: 2020_05_10_193453) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,12 +26,13 @@ ActiveRecord::Schema.define(version: 2020_05_09_200537) do
     t.integer "score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "category_id"
-    t.integer "user_id"
+    t.bigint "category_id"
+    t.bigint "user_id"
+    t.index ["category_id"], name: "index_games_on_category_id"
+    t.index ["user_id"], name: "index_games_on_user_id"
   end
 
   create_table "questions", force: :cascade do |t|
-    t.integer "game_id"
     t.string "q"
     t.string "aa"
     t.string "ab"
@@ -41,6 +42,8 @@ ActiveRecord::Schema.define(version: 2020_05_09_200537) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "link"
+    t.bigint "game_id"
+    t.index ["game_id"], name: "index_questions_on_game_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,4 +53,7 @@ ActiveRecord::Schema.define(version: 2020_05_09_200537) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "games", "categories"
+  add_foreign_key "games", "users"
+  add_foreign_key "questions", "games"
 end
