@@ -19,6 +19,8 @@ gem 'puma', '~> 4.1'
 gem 'fast_jsonapi'
 # Use Knock for JWT auth.
 gem 'knock'
+# Use ActiveStorage for cloud storage.
+gem "activestorage", ">= 6.0.3.1"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
