@@ -11,19 +11,17 @@ class Api::V1::UsersController < ApplicationController
     if @user.save
       render json: UserSerializer.new(@user), status: :accepted
     else
-      render json: {errors: user.errors.full_messages}, status: :unprocessable_entity
+      render json: {errors: @user.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
-  def edit
-
-  end
-
   def update
-
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    render json: UserSerializer.new(@user)
   end
 
-  def delete
+  def destroy
 
   end
 
