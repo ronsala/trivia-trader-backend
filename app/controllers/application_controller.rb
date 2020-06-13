@@ -1,11 +1,12 @@
 class ApplicationController < ActionController::API
-  include Knock::Authenticable
-  before_action :authenticate_user
-  before_action :set_default_format
+  # TODO
+  # include Knock::Authenticable
+  # before_action :authenticate_user
+  # before_action :set_default_format
 
-  private
+  # private
 
-  def set_default_format
-    request.format = :json
-  end
+  # def set_default_format
+  #   request.format = :json
+  # end
 end
