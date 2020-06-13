@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :authenticate_user
+  # before_action :authenticate_user
+  wrap_parameters :user, include: [:username, :email, :password]
 
   def index
     @users = User.all
@@ -25,9 +26,23 @@ class Api::V1::UsersController < ApplicationController
 
   end
 
+  def find
+    @user = User.find_by(email: params[:user][:email])
+    if @user
+      render json: @user
+    else
+      @errors = @user.errors.full_messages
+      render json: @errors
+    end
+  end
+
+  def set_user
+    @user = User.find_by(id: params[:id])
+  end
+
   private
 
   def user_params
-    params.require(:user).permit(:username, :email)
+    params.require(:user).permit(:username, :email, :password)
   end
 end

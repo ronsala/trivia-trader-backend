@@ -20,7 +20,8 @@ end
 20.times do
   User.create(
     username: Faker::Name.unique.name,
-    email: Faker::Internet.email
+    email: Faker::Internet.email,
+    password: 'password'
   )
 end
 
