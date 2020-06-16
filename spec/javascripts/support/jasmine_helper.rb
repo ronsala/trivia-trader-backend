@@ -9,8 +9,15 @@
 # end
 #
 # Example: prevent PhantomJS auto install, uses PhantomJS already on your path.
+# Jasmine.configure do |config|
+#   if ENV['TRAVIS']
+#     config.prevent_phantom_js_auto_install = true
+#   end
+# end
+
 Jasmine.configure do |config|
-  if ENV['TRAVIS']
-    config.prevent_phantom_js_auto_install = true
+  # You can add rack handlers for specific urls
+  config.add_rack_path '/index.html' do
+    [200]
   end
 end
