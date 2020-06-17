@@ -1,8 +1,3 @@
 class Api::V1::UserTokenController < Knock::AuthTokenController
-  # TODO
-  # #Trying this. Didn't see it in docs.
-  # def create
-  #   super
-  # end
-
+  skip_before_action :verify_authenticity_token
 end
