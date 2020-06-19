@@ -1,6 +1,6 @@
 # README
 
-## Trivia Trader
+## Trivia Trader [IN PROGRESS]
 
 Trivia Trader is the place to play trivia games on many subjects. You can also make your own games to stump your friends and people all over the world.
 
@@ -12,6 +12,8 @@ A user is able to:
 * play games
 * create games
 * invite friends via email
+
+Find the vanilla JavaScript frontend at (https://github.com/ronsala/trivia-trader-frontend).
 
 You can watch a video demo at <TODO></TODO>.
 For a transcript of the video, see demo_transcript.md.
