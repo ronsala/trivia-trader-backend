@@ -15,9 +15,9 @@
 #   end
 # end
 
-Jasmine.configure do |config|
-  # You can add rack handlers for specific urls
-  config.add_rack_path '/index.html' do
-    [200]
-  end
-end
+# Jasmine.configure do |config|
+#   # You can add rack handlers for specific urls
+#   config.add_rack_path '/index.html' do
+#     [200]
+#   end
+# end
