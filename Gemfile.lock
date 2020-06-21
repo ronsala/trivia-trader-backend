@@ -79,12 +79,6 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
-    jasmine (2.6.0)
-      jasmine-core (>= 2.6.0, < 3.0.0)
-      phantomjs
-      rack (>= 1.2.1)
-      rake
-    jasmine-core (2.99.0)
     jwt (1.5.6)
     knock (2.1.1)
       bcrypt (~> 3.1)
@@ -122,7 +116,6 @@ GEM
     pg (1.2.3)
     pg (1.2.3-x64-mingw32)
     pg (1.2.3-x86-mingw32)
-    phantomjs (2.1.1.0)
     puma (4.3.5)
       nio4r (~> 2.0)
     puma (4.3.5-java)
@@ -201,7 +194,6 @@ DEPENDENCIES
   byebug
   faker
   fast_jsonapi
-  jasmine
   knock
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
