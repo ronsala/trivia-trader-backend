@@ -5,6 +5,11 @@ require File.expand_path('../config/environment', __dir__)
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
+# Added accoring to https://stackoverflow.com/questions/24728321/rspec-capybara-rails-where-to-put-require-capybara-rails
+require 'capybara/rspec'
+# From https://github.com/teamcapybara/capybara/blob/3.33_stable/README.md
+Capybara.server = :puma # Until your setup is working
+# Capybara.server = :puma, { Silent: true } # To clean up your test output
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
