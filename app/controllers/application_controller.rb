@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
   # TODO
-  # include Knock::Authenticable
-  # before_action :authenticate_user
+  include Knock::Authenticable
+  before_action :authenticate_user
   # before_action :set_default_format
 
   # private
