@@ -36,6 +36,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Use Faker for seed data
   gem 'faker'
+  # Use Rspec-Rails for testing.
+  gem 'rspec-rails', '~> 4.0.0'
 end
 
 group :development do
