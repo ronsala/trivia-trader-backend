@@ -19,6 +19,8 @@ gem 'puma', '~> 4.1'
 gem 'fast_jsonapi'
 # Use Knock for JWT auth.
 gem 'knock'
+# Use JWT for authentication with Tokens.
+gem 'jwt'
 # Use ActiveStorage for cloud storage.
 gem "activestorage", ">= 6.0.3.1"
 
@@ -32,12 +34,11 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rack-cors'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'byebug' or 'binding.pry' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry'
   # Use Faker for seed data
   gem 'faker'
-  # Use Jasmine for tests
-  gem 'jasmine'
 end
 
 group :development do
