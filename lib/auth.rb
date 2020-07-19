@@ -6,7 +6,6 @@ class Auth
     payload = { user: JSON.parse(user_object.to_json) }
     # TODO: Set secret and algo to env variables.
     token = JWT.encode(payload, 'sekret', 'HS256')
-    decode_token(token)
   end
 
   def self.decode_token(token)
