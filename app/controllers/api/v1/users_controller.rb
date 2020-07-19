@@ -2,6 +2,15 @@ class Api::V1::UsersController < ApplicationController
   # before_action :authenticate_user, only: [:update]
   wrap_parameters :user, include: [:username, :email, :password]
 
+  def signup
+    user = User.new(user_params)
+    if user.save
+      render json: { token: Auth.createToken(user) }
+    else
+      render json: { errors: user.errors.full_messages}, status: 500
+    end
+  end
+
   def index
     @users = User.all
     render json: UserSerializer.new(@users)

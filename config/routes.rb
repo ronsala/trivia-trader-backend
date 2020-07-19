@@ -9,7 +9,8 @@ Rails.application.routes.draw do
       resources :games
       post 'user_token' => 'user_token#create'
       post 'find_user' => 'users#find'
-      post 'login', to: 'users#login'
+      post '/signup', to: 'users#signup'
+      post '/login', to: 'sessions#login'
       get '/auto_login', to: 'users#auto_login'
     end
   end

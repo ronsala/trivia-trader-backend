@@ -19,6 +19,8 @@ gem 'puma', '~> 4.1'
 gem 'fast_jsonapi'
 # Use Knock for JWT auth.
 gem 'knock'
+# Use JWT for authentication with Tokens.
+gem 'jwt'
 # Use ActiveStorage for cloud storage.
 gem "activestorage", ">= 6.0.3.1"
 
