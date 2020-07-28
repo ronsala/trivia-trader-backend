@@ -1,5 +1,5 @@
 class Api::V1::GamesController < ApplicationController
-  # before_action :authenticate_user
+  skip_before_action :authorized, only: [:index]
   before_action :set_game, only: %i[update destroy]
 
   def index
