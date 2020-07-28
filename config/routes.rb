@@ -10,8 +10,7 @@ Rails.application.routes.draw do
       post 'user_token' => 'user_token#create'
       post 'find_user' => 'users#find'
       post '/signup', to: 'users#signup'
-      post '/login', to: 'sessions#login'
-      get '/auto_login', to: 'users#auto_login'
+      post '/login', to: 'auth#create'
     end
   end
 end
