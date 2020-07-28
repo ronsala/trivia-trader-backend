@@ -1,6 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  # before_action :authenticate_user, only: [:update]
-  # wrap_parameters :user, include: [:username, :email, :password]
+  wrap_parameters :user, include: [:username, :email, :password]
   skip_before_action :authorized, only: :create
 
   def index
