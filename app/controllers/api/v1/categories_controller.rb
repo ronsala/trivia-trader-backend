@@ -1,16 +1,8 @@
-require 'Auth'
-
 class Api::V1::CategoriesController < ApplicationController
-  # before_action :authenticate_user
+  skip_before_action :authorized
 
   def index
-    # TODO: Restore auth after JWT works.
-    # token = request.env["HTTP_AUTHORIZATION"]
-    # if token && Auth.decode_token(token)
-      @categories = Category.all
-      render json: CategorySerializer.new(@categories)
-    # else
-    #   render json: { error: { message: "You must have a valid token!"}}, status: 500
-    # end
+    @categories = Category.all
+    render json: CategorySerializer.new(@categories)
   end
 end
