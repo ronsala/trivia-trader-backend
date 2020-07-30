@@ -12,9 +12,12 @@ class ApplicationController < ActionController::API
 
   before_action :authorized
 
+  SECRET = Rails.application.credentials.jwt[:secret]
+  ALGO = Rails.application.credentials.jwt[:algo]
+
   # TODO: Replace secret with ENV variable.
   def encode_token(payload)
-    JWT.encode(payload, 'my_s3cr3t')
+    JWT.encode(payload, SECRET)
   end
 
   def auth_header
@@ -25,8 +28,7 @@ class ApplicationController < ActionController::API
     if auth_header
       token = auth_header.split(' ')[1]
       begin
-        byebug
-        JWT.decode(token, 'my_s3cr3t', true, algorithm: 'HS256')
+        JWT.decode(token, SECRET, true, algorithm: ALGO)
       rescue JWT::DecodeError
         nil
       end
