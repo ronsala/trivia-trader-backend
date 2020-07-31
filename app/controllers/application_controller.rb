@@ -1,21 +1,9 @@
 class ApplicationController < ActionController::API
-  # TODO
-  # include Knock::Authenticable
-  # before_action :authenticate_user
-  # before_action :set_default_format
-
-  # private
-
-  # def set_default_format
-  #   request.format = :json
-  # end
-
   before_action :authorized
 
   SECRET = Rails.application.credentials.jwt[:secret]
   ALGO = Rails.application.credentials.jwt[:algo]
 
-  # TODO: Replace secret with ENV variable.
   def encode_token(payload)
     JWT.encode(payload, SECRET)
   end
