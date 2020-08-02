@@ -5,7 +5,6 @@ Rails.application.routes.draw do
       resources :categories, only: %i[index]
       resources :games
       resources :questions
-      post 'user_token' => 'user_token#create'
       post 'find_user' => 'users#find'
       post '/signup', to: 'users#signup'
       post '/login', to: 'auth#create'
