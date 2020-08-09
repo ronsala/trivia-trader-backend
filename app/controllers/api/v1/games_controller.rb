@@ -8,7 +8,7 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def create
-    @game = game.new(game_params)
+    @game = Game.new(game_params)
     if @game.save
       render json: gameSerializer.new(@game), status: :accepted
     else
