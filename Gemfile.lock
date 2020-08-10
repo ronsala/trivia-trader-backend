@@ -66,6 +66,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
+<<<<<<< HEAD
     capybara (3.33.0)
       addressable
       mini_mime (>= 0.1.3)
@@ -74,6 +75,9 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+=======
+    coderay (1.1.2)
+>>>>>>> master
     concurrent-ruby (1.1.6)
     crass (1.0.6)
     diff-lcs (1.4.1)
@@ -90,11 +94,7 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
-    jwt (1.5.6)
-    knock (2.1.1)
-      bcrypt (~> 3.1)
-      jwt (~> 1.5)
-      rails (>= 4.2)
+    jwt (2.2.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -127,7 +127,13 @@ GEM
     pg (1.2.3)
     pg (1.2.3-x64-mingw32)
     pg (1.2.3-x86-mingw32)
+<<<<<<< HEAD
     public_suffix (4.0.5)
+=======
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+>>>>>>> master
     puma (4.3.5)
       nio4r (~> 2.0)
     puma (4.3.5-java)
@@ -222,14 +228,16 @@ PLATFORMS
 
 DEPENDENCIES
   activestorage (>= 6.0.3.1)
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug
   capybara
   faker
   fast_jsonapi
-  knock
+  jwt (~> 2.2)
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
+  pry
   puma (~> 4.1)
   rack-cors
   rails (~> 6.0.2, >= 6.0.2.1)

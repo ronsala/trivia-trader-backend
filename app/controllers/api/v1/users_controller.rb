@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
-  # before_action :authenticate_user
   wrap_parameters :user, include: [:username, :email, :password]
+  skip_before_action :authorized, only: :create
 
   def index
     @users = User.all
@@ -10,9 +10,10 @@ class Api::V1::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      render json: UserSerializer.new(@user), status: :accepted
+      @token = encode_token(user_id: @user.id)
+      render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
     else
-      render json: {errors: @user.errors.full_messages}, status: :unprocessable_entity
+      render json: { error: 'Failed to create user.' }, status: :not_acceptable
     end
   end
 

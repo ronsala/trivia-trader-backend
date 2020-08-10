@@ -1,4 +1,5 @@
 class Api::V1::GamesController < ApplicationController
+  skip_before_action :authorized, except: %i[create update destroy]
   before_action :set_game, only: %i[update destroy]
 
   def index
