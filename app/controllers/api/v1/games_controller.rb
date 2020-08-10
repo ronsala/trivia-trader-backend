@@ -3,14 +3,15 @@ class Api::V1::GamesController < ApplicationController
   before_action :set_game, only: %i[update destroy]
 
   def index
-    @games = Game.all
+    games = Game.all
+    @games = games.select { |game| game.questions != [] }
     render json: GameSerializer.new(@games)
   end
 
   def create
-    @game = game.new(game_params)
+    @game = Game.new(game_params)
     if @game.save
-      render json: gameSerializer.new(@game), status: :accepted
+      render json: GameSerializer.new(@game), status: :accepted
     else
       render json: {errors: @game.errors.full_messages}, status: :unprocessable_entity
     end
