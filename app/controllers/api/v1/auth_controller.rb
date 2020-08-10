@@ -17,7 +17,7 @@ class Api::V1::AuthController < ApplicationController
     if user
       render json: UserSerializer.new(user)
     else
-      render json: { message: 'Please log in' }, stauts: :unauthorized
+      render json: { message: 'Please log in' }, status: :unauthorized
     end
   end
 
