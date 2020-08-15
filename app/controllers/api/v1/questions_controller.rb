@@ -10,7 +10,7 @@ class Api::V1::QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     if @question.save
-      render json: questionSerializer.new(@question), status: :accepted
+      render json: QuestionSerializer.new(@question), status: :accepted
     else
       render json: {errors: @question.errors.full_messages}, status: :unprocessable_entity
     end
@@ -33,6 +33,6 @@ class Api::V1::QuestionsController < ApplicationController
   private
 
   def question_params
-    params.require(:question).permit(:game_id, :q, :aa, :ab, :ac, :ad, :correct)
+    params.require(:question).permit(:game_id, :q, :aa, :ab, :ac, :ad, :correct, :link)
   end
 end
