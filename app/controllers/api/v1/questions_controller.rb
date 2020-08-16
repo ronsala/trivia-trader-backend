@@ -17,9 +17,11 @@ class Api::V1::QuestionsController < ApplicationController
   end
 
   def update
-    @question = Question.find(params[:id])
-    @question.update(question_params)
-    render json: QuestionSerializer.new(@question)
+    if @question.update(question_params)
+      render json: QuestionSerializer.new(@question)
+    else
+      render json: {errors: @game.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def destroy
@@ -27,7 +29,7 @@ class Api::V1::QuestionsController < ApplicationController
   end
 
   def set_question
-    @question = Question.find(id: params[:id])
+    @question = Question.find(params[:id])
   end
 
   private

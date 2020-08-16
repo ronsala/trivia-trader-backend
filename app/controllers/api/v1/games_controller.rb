@@ -18,9 +18,11 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def update
-    @game = Game.find(params[:id])
-    @game.update(game_params)
-    render json: GameSerializer.new(@game)
+    if @game.update(game_params)
+      render json: GameSerializer.new(@game)
+    else
+      render json: {errors: @game.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def destroy
@@ -28,7 +30,7 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def set_game
-    @game = Game.find(id: params[:id])
+    @game = Game.find(params[:id])
   end
 
   private
