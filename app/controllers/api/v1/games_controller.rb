@@ -4,8 +4,7 @@ class Api::V1::GamesController < ApplicationController
 
   def index
     games = Game.all
-    @games = games.select { |game| game.questions != [] }
-    render json: GameSerializer.new(@games)
+    render json: GameSerializer.new(games)
   end
 
   def create
@@ -36,6 +35,6 @@ class Api::V1::GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:title, :category_id, :user_id)
+    params.require(:game).permit(:title, :category_id, :user_id, :complete)
   end
 end
