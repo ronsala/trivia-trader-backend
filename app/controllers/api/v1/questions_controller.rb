@@ -10,16 +10,18 @@ class Api::V1::QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     if @question.save
-      render json: questionSerializer.new(@question), status: :accepted
+      render json: QuestionSerializer.new(@question), status: :accepted
     else
       render json: {errors: @question.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
   def update
-    @question = Question.find(params[:id])
-    @question.update(question_params)
-    render json: QuestionSerializer.new(@question)
+    if @question.update(question_params)
+      render json: QuestionSerializer.new(@question)
+    else
+      render json: {errors: @game.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def destroy
@@ -27,12 +29,12 @@ class Api::V1::QuestionsController < ApplicationController
   end
 
   def set_question
-    @question = Question.find(id: params[:id])
+    @question = Question.find(params[:id])
   end
 
   private
 
   def question_params
-    params.require(:question).permit(:game_id, :q, :aa, :ab, :ac, :ad, :correct)
+    params.require(:question).permit(:game_id, :q, :aa, :ab, :ac, :ad, :correct, :link)
   end
 end

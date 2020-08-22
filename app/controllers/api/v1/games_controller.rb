@@ -4,8 +4,7 @@ class Api::V1::GamesController < ApplicationController
 
   def index
     games = Game.all
-    @games = games.select { |game| game.questions != [] }
-    render json: GameSerializer.new(@games)
+    render json: GameSerializer.new(games)
   end
 
   def create
@@ -18,9 +17,11 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def update
-    @game = Game.find(params[:id])
-    @game.update(game_params)
-    render json: GameSerializer.new(@game)
+    if @game.update(game_params)
+      render json: GameSerializer.new(@game)
+    else
+      render json: {errors: @game.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def destroy
@@ -28,12 +29,12 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def set_game
-    @game = Game.find(id: params[:id])
+    @game = Game.find(params[:id])
   end
 
   private
 
   def game_params
-    params.require(:game).permit(:title, :category_id, :user_id)
+    params.require(:game).permit(:title, :category_id, :user_id, :complete)
   end
 end
