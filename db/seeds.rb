@@ -25,7 +25,7 @@ end
   )
 end
 
-Game.create(title: 'Controversy on Canvas', category_id: Category.find_by(name: 'Arts & Entertainment').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
+Game.create(title: 'Controversy on Canvas', category_id: Category.find_by(name: 'Arts & Entertainment').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id), complete: true)
 
 Question.create(game_id: Game.last.id, q: "Salvador Dali's 'The Enigma of William Tell' offended many because:", aa: "It was based on an idea stolen from Picaso.", ab: "It was dedicated to Spanish dictator Francisco Franco.", ac: "It was painted in human blood.", ad: "It depicted a half-naked Vladimir Lenin.", correct: 'd', link: "https://www.sleek-mag.com/article/controversial-artworks/")
 
@@ -37,7 +37,7 @@ Question.create(game_id: Game.last.id, q: "Cedric Chamber's 'The Prophet' shows 
 
 Question.create(game_id: Game.last.id, q: "Sarah Sole was inspired by a dream to produce more than 40 paintings of this politician:", aa: "Franklin Roosevelt", ab: "Andrew Yang", ac: "Boris Yeltzin", ad: "Hillary Clinton", correct: 'd', link: "https://www.rollingstone.com/culture/culture-news/meet-the-controversial-artist-who-creates-surreal-paintings-of-hillary-clinton-33450/")
 
-Game.create(title: 'Musical Conspiracy Theories', category_id: Category.find_by(name: 'Arts & Entertainment').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
+Game.create(title: 'Musical Conspiracy Theories', category_id: Category.find_by(name: 'Arts & Entertainment').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id), complete: true)
 
 Question.create(game_id: Game.last.id, q: "This singer's bare feet on an album cover was interpreted by some as a clue they had died and been replaced by a lookalike:", aa: "Frank Sinatra", ab: "Paul McCartney", ac: "Joan Jett", ad: "Justin Bieber", correct: 'b', link: "https://www.bbc.co.uk/programmes/articles/3L81VM3BPSHW9L3KTsRnm6K/the-strangest-musical-conspiracy-theories")
 
@@ -49,7 +49,7 @@ Question.create(game_id: Game.last.id, q: "What singer's album featuring a 'K. W
 
 Question.create(game_id: Game.last.id, q: "Murdered child beauty pageant winner JonBenét Ramsey is rumored to have not died and grown up to be:", aa: "Billie Eilish", ab: "Lady Gaga", ac: "Katy Perry", ad: "Dua Lipa", correct: 'c', link: "https://happymag.tv/here-are-the-10-wackiest-musical-conspiracy-theories-of-all-time/")
 
-Game.create(title: 'Ruler Rules', category_id: Category.find_by(name: 'Games & Sports').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
+Game.create(title: 'Ruler Rules', category_id: Category.find_by(name: 'Games & Sports').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id), complete: true)
 
 Question.create(game_id: Game.last.id, q: "The recommended depth of an Olympic-size pool is:", aa: "3 meters", ab: "10 meters", ac: "1 meter", ad: "7 meters", correct: 'a', link: "https://en.wikipedia.org/wiki/Olympic-size_swimming_pool")
 
@@ -61,7 +61,7 @@ Question.create(game_id: Game.last.id, q: "An official USBC bowling lane measure
 
 Question.create(game_id: Game.last.id, q: "The world's longest golf hole measures how many meters?:", aa: "101", ab: "513", ac: "793", ad: "881", correct: 'd', link: "https://www.guinnessworldrecords.com/world-records/64203-longest-golf-hole/")
 
-Game.create(title: 'The Great War', category_id: Category.find_by(name: 'History').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
+Game.create(title: 'The Great War', category_id: Category.find_by(name: 'History').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id), complete: true)
 
 Question.create(game_id: Game.last.id, q: "World War I started after the assassination of Franz Ferdinand in this city:", aa: "New York", ab: "London", ac: "Sarajevo", ad: "Vienna", correct: 'c', link: "https://en.wikipedia.org/wiki/World_War_I")
 
@@ -73,7 +73,7 @@ Question.create(game_id: Game.last.id, q: "Britain's 'bantam battalions' used:",
 
 Question.create(game_id: Game.last.id, q: "The first declaration of war in World War I was:", aa: "US on Germany", ab: "Italy on Britain", ac: "France on Belgium", ad: "Austria-Hungary on Serbia", correct: 'd', link: "https://www.historyhit.com/facts-that-tell-the-story-of-world-war-one/")
 
-Game.create(title: 'The Solar System', category_id: Category.find_by(name: 'Science & Tech').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
+Game.create(title: 'The Solar System', category_id: Category.find_by(name: 'Science & Tech').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id), complete: true)
 
 Question.create(game_id: Game.last.id, q: "How many moons have been discovered in our solar system:", aa: "23", ab: "1", ac: "9387", ad: "194", correct: 'd', link: "https://space-facts.com/solar-system/")
 
@@ -85,7 +85,7 @@ Question.create(game_id: Game.last.id, q: "The Oort Cloud is made up of:", aa: "
 
 Question.create(game_id: Game.last.id, q: "Which planet has the highest average temperature, at 875 degrees Fahrenheit (468 Celsius):", aa: "Mercury", ab: "Venus", ac: "Mars", ad: "Neptune", correct: 'b', link: "https://earthsky.org/space/ten-things-you-may-not-know-about-the-solar-system")
 
-Game.create(title: 'Starts With L', category_id: Category.find_by(name: 'Hodge Podge').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id))
+Game.create(title: 'Starts With L', category_id: Category.find_by(name: 'Hodge Podge').id, user_id: Faker::Number.between(from: User.first.id, to: User.last.id), complete: true)
 
 Question.create(game_id: Game.last.id, q: "The petal of an orchid:", aa: "labellum", ab: "labiovelar", ac: "labrid", ad: "laccolith", correct: 'a', link: "https://www.dictionary.com/browse/labellum")
 
