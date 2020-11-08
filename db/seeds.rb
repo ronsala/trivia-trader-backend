@@ -29,7 +29,7 @@ Game.create(title: 'Controversy on Canvas', category_id: Category.find_by(name: 
 
 Question.create(game_id: Game.last.id, q: "Salvador Dali's 'The Enigma of William Tell' offended many because:", aa: "It was based on an idea stolen from Picaso.", ab: "It was dedicated to Spanish dictator Francisco Franco.", ac: "It was painted in human blood.", ad: "It depicted a half-naked Vladimir Lenin.", correct: 'd', link: "https://www.sleek-mag.com/article/controversial-artworks/")
 
-Question.create(game_id: Game.last.id, q: "Albrecht Dürer's 1500 Self-Portrait was controversial for its depiction of the artist:", aa: "giving an obscene gesture", ab: "nude", ac: "as Christ", ad: "defacing a church", correct: '', link: "http://alternativemindz.com/2014/11/top-15-most-controversial-art-paintings-of-all-time/")
+Question.create(game_id: Game.last.id, q: "Albrecht Dürer's 1500 Self-Portrait was controversial for its depiction of the artist:", aa: "giving an obscene gesture", ab: "nude", ac: "as Christ", ad: "defacing a church", correct: 'c', link: "http://alternativemindz.com/2014/11/top-15-most-controversial-art-paintings-of-all-time/")
 
 Question.create(game_id: Game.last.id, q: "In 1953, Robert Rauschenberg sparked controversy by displaying:", aa: "a finger painting showing his mother as Uncle Sam", ab: "a piece of paper after he had erased the drawing another artist had created on it", ac: "his underwear in an elaborate frame", ad: "a radioactive depiction of a mushroom cloud", correct: 'b', link: "https://en.wikipedia.org/wiki/Erased_de_Kooning_Drawing")
 
