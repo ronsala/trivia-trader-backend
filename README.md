@@ -10,8 +10,7 @@ A user is able to:
 * log in
 * choose trivia games by category
 * play games
-* create games
-* invite friends via email
+* create games, edit and delete them
 
 This is a Ruby on Rails API backend. For the frontend, see <https://github.com/ronsala/trivia-trader-frontend>.
 
