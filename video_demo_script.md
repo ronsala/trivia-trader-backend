@@ -22,7 +22,7 @@ Now that we've seen how basic game play works, let's go through the remaining qu
 
 [Next, C, Next, B, Next, C]
 
-The game is over, and if I click on Get Score, I see I got [num] right out of five.
+The game is over, and if I click on Get Score, I see I got three right out of five.
 
 With TriviaTrader, you can not only *play* trivia games, you can also make your *own*, on whatever subjects interest you, to challenge other users.
 
@@ -49,7 +49,7 @@ A) var
 B) const
 C) set
 D) let
-Correct: B (first enter C)
+Correct: B
 Source: https://en.wikipedia.org/wiki/JavaScript
 
 4. Which of these is not a basic JavaScript data type?
@@ -65,6 +65,8 @@ A) loop
 B) block
 C) value
 D) closure
+Correct: D
+
 Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#:~:text=A%20closure%20is%20the%20combination,state%20(the%20lexical%20environment).&text=In%20JavaScript%2C%20closures%20are%20created,created%2C%20at%20function%20creation%20time.
 ]
 
