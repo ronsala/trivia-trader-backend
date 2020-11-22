@@ -1,5 +1,7 @@
 # Video Demo Script
 
+[⇧⌘R]
+
 Love trivia? With TriviaTrader, you can play trivia games on many subjects. You can also make your own games to stump your friends and people all over the world.
 
 Let's start by playing a game.
@@ -30,7 +32,7 @@ Since much of TriviaTrader is written in the JavaScript programming language, le
 
 We'll select the category Science & Tech and click Next.
 
-Question 1, "Who invented JavaScript?" For potential answers, let put, "Matz", "Guido van Rossum", "Grace Hopper", and "Brendan Eich". And let's select D, since that's the correct answer. To back it up, we'll paste a link to Chapter 4 from the book *Speaking JavaScript*. [http://speakingjs.com/es5/ch04.html]. To keep this video short, I'll enter the remaining questions and come back....
+Question 1, "Who invented JavaScript?" For potential answers, let put, "Matz", "Guido van Rossum", "Grace Hopper", and "Brendan Eich". And let's select D, since that's the correct answer. To back it up, we'll paste a link to Chapter 4 from the book *Speaking JavaScript*. [http://speakingjs.com/es5/ch04.html]. To keep this video short, I'll enter the remaining questions and come back.... [⇧⌘P]
 
 [Remaining Q & A's:
 
@@ -66,8 +68,12 @@ D) closure
 Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#:~:text=A%20closure%20is%20the%20combination,state%20(the%20lexical%20environment).&text=In%20JavaScript%2C%20closures%20are%20created,created%2C%20at%20function%20creation%20time.
 ]
 
+[⇧⌘P]
+
 Now that I've entered all the info for this game, I have a chance to review it question by question and make any changes.
 
 If I go back to my user page, I now see "JavaScript 101" under "Games by this user".
 
 Thanks for checking out TriviaTrader!
+
+[⇧⌘R]
