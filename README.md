@@ -14,10 +14,10 @@ A user is able to:
 
 This is a Ruby on Rails API backend. For the frontend, see <https://github.com/ronsala/trivia-trader-frontend>.
 
-You can watch a video demo at <https://youtu.be/3Cer0pcacIg>.
-For a transcript of the video, see demo_transcript.md.
+You can watch a video demo [here](https://youtu.be/3Cer0pcacIg).
+For a transcript of the video, see video_demo_script.md.
 
-You can read a blog post about the creation of the app at <TODO></TODO>.
+You can read a blog post about the creation of the app [here](http://ronsala.net/makefile_005_js_project--reuseable_functions_for_adding_html_dynamically).
 
 ### Versions
 
