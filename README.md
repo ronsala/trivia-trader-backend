@@ -1,6 +1,6 @@
 # README
 
-## Trivia Trader
+## TriviaTrader
 
 TriviaTrader is the place to play trivia games on many subjects. You can also make your own games to stump your friends and people all over the world.
 
