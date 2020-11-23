@@ -2,7 +2,7 @@
 
 ## Trivia Trader
 
-Trivia Trader is the place to play trivia games on many subjects. You can also make your own games to stump your friends and people all over the world.
+TriviaTrader is the place to play trivia games on many subjects. You can also make your own games to stump your friends and people all over the world.
 
 A user is able to:
 
@@ -34,7 +34,10 @@ Once you Fork or Clone this app, cd into that directory and then execute:
 ```
 bundle install
 rails db:migrate
+rails s
 ```
+Open index.html in the frontend in your browser.
+
 ### Contributing
 
 Bug reports and pull requests are welcome on GitHub at <https://github.com/ronsala/trivia-trader>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
