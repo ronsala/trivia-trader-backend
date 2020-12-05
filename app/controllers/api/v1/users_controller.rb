@@ -28,6 +28,12 @@ class Api::V1::UsersController < ApplicationController
     @user.destroy
   end
 
+  def favorites
+    favs = @user.favorites
+    favs.push(user_params[:favorite_category_id])
+    @user.update(favorites: favs)
+  end
+
   def find
     @user = User.find_by(email: params[:user][:email])
     if @user
@@ -45,6 +51,6 @@ class Api::V1::UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+    params.require(:user).permit(:username, :email, :password, :favorite_category_id, :id)
   end
 end
