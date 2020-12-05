@@ -28,10 +28,16 @@ class Api::V1::UsersController < ApplicationController
     @user.destroy
   end
 
-  def favorites
+  def favorite
     favs = @user.favorites
     favs.push(user_params[:favorite_category_id])
     @user.update(favorites: favs)
+    render json: UserSerializer.new(@user)
+  end
+
+  def favorites
+    @user = User.find_by(id: params[:id])
+    render json: UserSerializer.new(@user)
   end
 
   def find
