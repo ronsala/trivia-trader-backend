@@ -5,6 +5,8 @@ Rails.application.routes.draw do
       resources :categories, only: %i[index]
       resources :games
       resources :questions
+      get '/favorites', to: 'users#favorites'
+      patch '/favorite', to: 'users#favorite'
       post 'find_user' => 'users#find'
       post '/signup', to: 'users#signup'
       post '/login', to: 'auth#create'
